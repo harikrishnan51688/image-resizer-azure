@@ -45,11 +45,12 @@ Kubernetes Deployment:
 
 1. Push the image to Azure Container Registry:
 ```
-docker tag imageresizer:v1 imageresizer.azurecr.io/imageresizer:v1
+docker build -t imageresizer.azurecr.io/imageresizer:v1 .
 docker push imageresizer.azurecr.io/imageresizer:v1
 ```
 
 2. Deploy to Kubernetes:
+Create a Kubernetes cluster in Azure (if you don’t already have one): then
 ```
 kubectl apply -f deployment.yaml
 ```
