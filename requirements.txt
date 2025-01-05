@@ -1,3 +1,4 @@
 flask
 pillow
 azure-storage-blob
+python-dotenv
